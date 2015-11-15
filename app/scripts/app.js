@@ -75,6 +75,10 @@ var app = angular
         templateUrl: 'views/collections/list.html',
         controller: 'CollectionListCtrl'
       })
+      .when('/collections/create', {
+        templateUrl: 'views/collections/create.html',
+        controller: 'CollectionCreateCtrl'
+      })
       .when('/entities', {
         templateUrl: 'views/entities/list.html',
         controller: 'EntityListCtrl'
