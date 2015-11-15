@@ -7,7 +7,15 @@ angular.module('nucleusApp')
   '$window',
   function($http, $rootScope, $window) {
     return {
-      
+      getAll: function(page, size) {
+        return $http.get($rootScope.getBackendUrl() + 'collections/' + '?page=' + (page || 0) + '&size=' + (size || 10), {
+          //TODO: refactor this
+          headers: {
+            credentials: $window.sessionStorage.credentials,
+            principal: $window.sessionStorage.principal
+          }
+        });
+      }
     };
   }
 ]);

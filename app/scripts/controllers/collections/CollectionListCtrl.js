@@ -7,6 +7,10 @@ angular.module('nucleusApp')
   '$location',
   function($scope, CollectionService, $location) {
     $scope.service = CollectionService;
+
+    $scope.onCollectionsLoaded = function(res) {
+      $scope.collections = res;
+    };
     
   }
 ]);
