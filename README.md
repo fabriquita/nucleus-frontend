@@ -31,3 +31,7 @@ $ bower install
 ```
 $ grunt serve
 ```
+
+## Notes
+Bootstrap is set to 3.3.4 on bower.json due to a bug, see https://github.com/yeoman/generator-angular/issues/1116
+
