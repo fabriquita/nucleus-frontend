@@ -63,7 +63,6 @@ angular.module('nucleusApp')
 
         function updateOriginalModel() {
           $scope.model.name = $scope.name;
-          $scope.model.description = $scope.description;
           GroupService.get($scope.group).then(function(res) {
             $scope.model.group = res.data;
           }, function(err) {

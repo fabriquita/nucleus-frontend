@@ -16,6 +16,15 @@ angular.module('nucleusApp')
           }
         });
       },
+      update: function(id, data) {
+        return $http.post($rootScope.getBackendUrl() + 'collections/' + id, data, {
+          //TODO: refactor this
+          headers: {
+            credentials: $window.sessionStorage.credentials,
+            principal: $window.sessionStorage.principal
+          }
+        });
+      },
       getAll: function(page, size) {
         return $http.get($rootScope.getBackendUrl() + 'collections/' + '?page=' + (page || 0) + '&size=' + (size || 10), {
           //TODO: refactor this
